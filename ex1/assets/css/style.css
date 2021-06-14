@@ -23,16 +23,34 @@ img{
     align-items: center;
 }
 
-.toolbar-wrap{
+#toolbar{
     position: absolute;
     height: 100%;
-    width: 100px;
+    width: 300px;
     left:0;
     top:0;
-    background-color: #ffffff33;
+    /* background-color: #ffffff33; */
     z-index: 2;
+    display: flex;
 }
 
+#tools{
+    height: 100%;
+    width: 80%;
+    background-color: #fff;
+    padding: 10px;
+    display: block;
+}
+#toolbar.closed #tools{
+    width: 0;
+    display: none;
+}
+#tools-handle{
+    width: 20%;
+    background-color: #ffffff33;
+    padding: 10px;
+    cursor: pointer;
+}
 #full-screen-img{
     /* background-color: #00000011; */
     position: relative;
@@ -48,4 +66,12 @@ img{
     height: 18%;
     border-radius: 50%;
     background: rgb(120, 46, 76);
+}
+
+#rock-nav{
+    height: calc(100% - 120px);
+    overflow: scroll;
+}
+.controls{
+    height: 120px;
 }
