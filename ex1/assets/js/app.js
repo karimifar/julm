@@ -25,8 +25,10 @@ var r2,g2,b2;
 var rgb1,rgb2;
 var inTime = 10000;
 var outTime = 5000;
+var intervalColor;
 
 function colorShift(){
+    clearInterval(intervalColor)
     r1 = Math.floor(Math.random() * 216)
     g1 = Math.floor(Math.random() * 216)
     b1 = Math.floor(Math.random() * 216)
@@ -52,8 +54,8 @@ function colorShift(){
     console.log(rgb1,rgb2)
     $('#circle').css('background', rgb2)
     $('.main-view').css('background', rgb1)
-    timing();
-    setInterval(timing, inTime+outTime);
+    // timing();
+    intervalColor = setInterval(timing, inTime+outTime);
 }
 colorShift();
 
@@ -62,3 +64,7 @@ function timing(){
     $('#circle').css('background', rgb2)
     setTimeout(function(){$('#circle').css('background', 'rgb(255,255,255)')},inTime)
 }
+timing();
+$('#test').on('click', function(){
+    colorShift();
+})
