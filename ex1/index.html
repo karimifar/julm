@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     
+    <script src="https://kit.fontawesome.com/b5e77ab30a.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>Exercise 1</title>
@@ -21,31 +23,35 @@
 
     </header>
     <div class="body-content">
-        <div id="toolbar" class="toolbar-wrap closed">
+        <div id="toolbar" class="toolbar-wrap ">
             <div id="tools" class="">
                 <div class="controls">
-                    <div>
+                    <div id="delay-control">
                         <p>Choose delay time:</p>
                         <div class="btn-group" id="delay" role="group" aria-label="Choose delay">
                             <input type="radio" class="btn-check" name="btnradio" id="btn-short" value="shr" >
-                            <label class="btn btn-outline-primary" for="btn-short">Short</label>
+                            <label class="julm-btn" for="btn-short">Short</label>
                             
                             <input type="radio" class="btn-check" name="btnradio" id="btn-medium" value="med" checked>
-                            <label class="btn btn-outline-primary" for="btn-medium">Medium</label>
+                            <label class="julm-btn" for="btn-medium">Medium</label>
                             
                             <input type="radio" class="btn-check" name="btnradio" id="btn-long" value="lng">
-                            <label class="btn btn-outline-primary" for="btn-long">Long</label>
+                            <label class="julm-btn" for="btn-long">Long</label>
                         </div>
                     </div>
-                    <button class="btn" id="test">Change color</button>
+                    <button class="julm-btn" id="test">Change color</button>
                 </div>
                 
-                <div id="rock-nav">
-    
+                <div id=rock-nav-wrap>
+                    <p>Choose a rock:</p>
+                
+                    <div id="rock-nav">
+                        
+                    </div>
                 </div>
             </div>
             <div id="tools-handle">
-                >
+                <i id="arrow" class="fas fa-angle-double-left"></i>
             </div>
             
         </div>
@@ -53,7 +59,7 @@
             
             <div id="full-screen-img" class="image-wrap">
                 
-                <img id="displayRock" src="./assets/img/rocks/rock_3.png" alt="image of a rock">
+                <img id="displayRock" src="./assets/img/rocks/rock_11.png" alt="image of a rock">
                 <div id="circle">
                 </div>
             </div>

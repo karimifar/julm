@@ -10,8 +10,18 @@ var outColor;
 var delay;
 var rocksN = 25;
 
-colorShift();
-resetSizes();
+for (var i =1; i<=rocksN; i++){
+    if(i==11){
+        var select = 'display'
+    }else{
+        var select = null;
+    }
+    var img = '<img src="./assets/img/rocks/rock_'+i+'.png">';
+    var navItem = $('<div class="rock-nav-item rock_'+i+' ' +select+'" data-rock='+i+'>').append(img);
+    
+    $('#rock-nav').append(navItem)
+}
+
 
 function resetSizes(){
     var squareSize;
@@ -84,6 +94,8 @@ function colorShift(){
     console.log(rgb1,rgb2)
     $('#circle').css('background', rgb2)
     $('.main-view').css('background', rgb1)
+
+    $('.rock-nav-item.display').css('border-bottom-color',rgb2)
     // timing();
     clearInterval(intervalColor)
     clearTimeout(outColor)
@@ -101,22 +113,26 @@ $('#test').on('click', function(){
     colorShift();
 })
 
-for (var i =1; i<=rocksN; i++){
-    var img = '<img src="./assets/img/rocks/rock_'+i+'.png">';
-    var navItem = $('<div class="rock-nav-item" data-rock='+i+'>').append(img);
-    
-    $('#rock-nav').append(navItem)
-}
+
 
 
 $('.rock-nav-item').on('click', function(){
-    var rock = $(this).data('rock');
+    var rock = 'rock_' + $(this).data('rock');
     console.log(rock);
-    var img = './assets/img/rocks/rock_'+rock+'.png';
-    $('#displayRock').attr('src',img)
+    var img = './assets/img/rocks/'+rock+'.png';
+    $('#displayRock').attr('src',img);
+    $('.rock-nav-item').removeClass('display');
+    $('.rock-nav-item').css('border-bottom-color','#ffffff00')
+    $('.'+rock).addClass('display')
+    $('.rock-nav-item.display').css('border-bottom-color',rgb2)
 })
 
 $('#tools-handle').on('click',function(){
     $('#toolbar').toggleClass('closed')
 })
 
+
+
+
+colorShift();
+resetSizes();
