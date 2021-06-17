@@ -53,6 +53,9 @@ img{
     display: flex;
     flex-direction: column;
 }
+p.control-title{
+    text-transform: uppercase;
+}
 #toolbar.closed #tools{
     width: 0;
     display: none;

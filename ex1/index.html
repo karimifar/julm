@@ -14,7 +14,7 @@
     
     <script src="https://kit.fontawesome.com/b5e77ab30a.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=2">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>Exercise 1</title>
 </head>
@@ -27,7 +27,7 @@
             <div id="tools" class="">
                 <div class="controls">
                     <div id="delay-control">
-                        <p>Choose delay time:</p>
+                        <p class='control-title'>Time</p>
                         <div class="btn-group" id="delay" role="group" aria-label="Choose delay">
                             <input type="radio" class="btn-check" name="btnradio" id="btn-short" value="shr" >
                             <label class="julm-btn" for="btn-short">Short</label>
@@ -39,11 +39,15 @@
                             <label class="julm-btn" for="btn-long">Long</label>
                         </div>
                     </div>
-                    <button class="julm-btn" id="test">Change color</button>
+                    <div class="color-control">
+                        <p class='control-title'>Color:</p>
+                        <button class="julm-btn" id="test">Refresh</button>
+                    </div>
+                    
                 </div>
                 
                 <div id=rock-nav-wrap>
-                    <p>Choose a rock:</p>
+                    <p class='control-title'>Form:</p>
                 
                     <div id="rock-nav">
                         
