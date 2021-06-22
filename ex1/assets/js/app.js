@@ -8,10 +8,10 @@ var outTime = 4000;
 var intervalColor;
 var outColor;
 var delay;
-var rocksN = 25;
+var rocksN = 16;
 
 for (var i =1; i<=rocksN; i++){
-    if(i==11){
+    if(i==7){
         var select = 'display'
     }else{
         var select = null;
