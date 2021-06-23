@@ -1,0 +1,28 @@
+
+#full-screen-img{
+    /* background-color: #00000011; */
+    position: relative;
+    /* margin:auto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
+
+
+#spinner{
+    animation-name: spin;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+  
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
