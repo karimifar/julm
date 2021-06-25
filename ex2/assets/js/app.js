@@ -17,7 +17,7 @@ for (var i =1; i<=spinnerN; i++){
         var select = null;
     }
     var img = '<img src="./assets/img/spinners/Spinner_'+i+'.png">';
-    var navItem = $('<div class="spinner-nav-item spinner_'+i+' ' +select+'" data-spinner='+i+'>').append(img);
+    var navItem = $('<div class="spinner-nav-item Spinner_'+i+' ' +select+'" data-spinner='+i+'>').append(img);
     
     $('#spinner-nav').append(navItem)
 }
