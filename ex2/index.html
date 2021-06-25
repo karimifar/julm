@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/b5e77ab30a.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/ex2.css?v=2">
+    <link rel="stylesheet" href="./assets/css/ex2.css">
     <link rel="stylesheet" href="./assets/css/ex2-re.css">
     <title>Exercise 1</title>
 </head>
@@ -24,9 +24,20 @@
 
     </header>
     <div class="body-content">
-        <div id="toolbar" class="toolbar-wrap closed">
+        <div id="toolbar" class="toolbar-wrap">
             <div id="tools" class="">
+                <div id="timeControl">
+                    <p class='control-title'>Speed</p>
+                    <input type="range" min="20" max="1000" value="41" class="slider"  id="timeRange">
+                    <span id="textInput">30 ms</span>
+                </div>
+                <div id='spinner-nav-wrap'>
+                    <p class='control-title'>Form</p>
                 
+                    <div id="spinner-nav">
+                        
+                    </div>
+                </div>
             </div>
             <div id="tools-handle">
                 <i id="arrow" class="fas fa-angle-double-left"></i>
@@ -37,7 +48,7 @@
             
             <div id="full-screen-img" class="image-wrap">
                 
-                <img id="spinner" src="./assets/img/spinners/Spinner_2.png" alt="spinner">
+                <img id="spinner" src="./assets/img/spinners/Spinner_1.png" alt="spinner">
 
             </div>
         </div>
