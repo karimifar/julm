@@ -81,7 +81,7 @@ $('#tools-handle').on('click',function(){
 
 
 $('.spinner-nav-item').on('click', function(){
-    var spinner = 'spinner_' + $(this).data('spinner');
+    var spinner = 'Spinner_' + $(this).data('spinner');
     var img = './assets/img/spinners/'+spinner+'.png';
     $('#spinner').attr('src',img);
     $('.spinner-nav-item').removeClass('display');
