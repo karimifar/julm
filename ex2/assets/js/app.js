@@ -8,7 +8,7 @@ var outTime = 4000;
 var intervalColor;
 var outColor;
 var delay;
-var spinnerN = 8;
+var spinnerN = 9;
 
 for (var i =1; i<=spinnerN; i++){
     if(i==1){
