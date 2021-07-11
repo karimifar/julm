@@ -36,17 +36,19 @@
 .object-nav-item:hover{
     background-color: #eee;
 }
-/* .object-nav-item.display{
-    background-color: #eee;
-    border-color: #222;
-} */
-
+.object-nav-item img{
+    height: auto;
+}
 .appended-object{
     width: 40%;
     position: absolute;
     top:30px;
     left:30%;
+    cursor:grab;
     /* mix-blend-mode: multiply; */
+}
+.appended-object:active{
+    cursor: grabbing;
 }
 
 #blend-control{
