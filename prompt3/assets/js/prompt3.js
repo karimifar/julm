@@ -31,6 +31,7 @@ $('.object-nav-item').on('click', function(){
     var div = $('<div class="appended-object" id=appended-'+object+ ' ></div>')
     $('#foreground').append(div.append(img))
     $('.appended-object').draggable();
+    $('.appended-object').resizable({ handles: "se, sw, nw, ne" });
     $('.appended-object').css('mix-blend-mode', currendBlend)
 })
 
