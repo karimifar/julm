@@ -1,0 +1,38 @@
+section{
+    height: 100vh;
+    padding: 10%;
+}
+.julm-container{
+    width: 100%;
+    height: 100%;
+}
+
+#site-title h1{
+    font-weight: 700;
+    font-size: 90px;
+    letter-spacing: -2px;
+    line-height: 1em;
+    margin-bottom: 0;
+    width: fit-content;
+}
+
+#site-title h1:nth-child(2){
+    text-align: right;
+}
+
+.sec1-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#quote{
+    width: 60%;
+    align-self: flex-end;
+}
+#quote p{
+    font-size: 36px;
+    font-weight: 200;
+    font-style: italic;
+    text-align: right;
+}
