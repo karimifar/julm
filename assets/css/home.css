@@ -1,10 +1,32 @@
 section{
-    height: 100vh;
+    /* min-height: 100vh; */
     padding: 10%;
 }
 .julm-container{
     width: 100%;
     height: 100%;
+    display: flex;
+}
+.julm-container .sec-content{
+    width: 60%;
+    padding: 0 30px;
+}
+
+p{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+.julm-container h2{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 50px;
+    border-top: 1px solid #222;
+    flex-grow: 1 ;
+}
+#site-title{
+    margin-bottom: 10%;
 }
 
 #site-title h1{
@@ -21,7 +43,6 @@ section{
 }
 
 .sec1-container{
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -35,4 +56,62 @@ section{
     font-weight: 200;
     font-style: italic;
     text-align: right;
+}
+#section3 .title{
+    display: flex;
+}
+#section3  .title h2{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 50px;
+    border-bottom: 1px solid #222;
+    width: 40%;
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+#section3 .title .spacer{
+    width:60%;
+}
+.obj-wrap{
+    display: flex;
+    border-top: 1px solid #222;
+}
+.obj-wrap:last-child{
+    border-bottom: 1px solid #222;
+}
+.obj-wrap .no{
+    font-size: 72px;
+    padding: 10px;
+    font-weight: 100;
+    width: 150px;
+    text-align: center;
+    align-self: center;
+}
+.obj-wrap .obj{
+    align-self: center;
+    text-transform: uppercase;
+    width: calc(100% - 150px);
+    padding: 20px 10px;
+
+}
+.obj-wrap .obj p{
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+footer{
+    border-top: 1px solid #ddd;
+    color: #222;
+    padding: 3% 20% 5% ;
+}
+.footer-wrap p{
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+}
+a, a:hover{
+    color: unset;
+}
+a:hover{
+    opacity: 80%;
 }
