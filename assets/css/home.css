@@ -51,6 +51,10 @@ p{
     line-height: 1em;
     margin-bottom: 0;
     width: fit-content;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    /* background: url("object-11.png"); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #site-title h1:nth-child(2){

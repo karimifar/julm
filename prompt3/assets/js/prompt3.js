@@ -44,8 +44,7 @@ $('.object-nav-item').on('click', function(){
     $('.appended-rock img').css('mix-blend-mode', currendBlend)
 
     $('.exit').on('click', function(){
-        var target = $(this).data('target');
-        $(target).remove();
+        $(this).parent().remove();
     })
 })
 
