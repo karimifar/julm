@@ -6,7 +6,11 @@
     left: 0;
     overflow: hidden;
 }
-#red{
+#background{
+    background: linear-gradient(90deg, rgba(255,0,0,1) 10%, rgba(0,255,0,1) 50%, rgba(0,0,255,1) 90%);
+    background:  linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,0,1) 60%, rgba(0,0,255,1) 80%, rgba(0,0,255,1) 100%);
+}
+/* #red{
     background-color: rgb(255, 0, 0);
     width: 100%;
 }
@@ -17,7 +21,7 @@
 #blue{
     background-color: rgb(0, 0, 255);
     width: 100%;
-}
+} */
 
 #object-nav{
     display: flex;
@@ -45,6 +49,8 @@
     top:30px;
     left:30%;
     cursor:grab;
+    padding: 5px;
+
     /* mix-blend-mode: multiply; */
 }
 .appended-object:active{
@@ -54,9 +60,30 @@
 #blend-control{
     margin-bottom: 20px;
 }
+#bg-control{
+    margin-bottom: 20px;
+}
+#bg-btn{
+    text-transform: uppercase;
+}
 #blend-mode{
     text-transform: capitalize;
 }
 #tools{
     overflow: scroll;
+}
+
+.exit{
+    display: none;
+    position: absolute;
+    top:-5px;
+    right:-5px;
+    cursor: pointer;
+    color: #222;
+    opacity: 0.4;
+    mix-blend-mode: darken;
+    padding: 10px;
+}
+.appended-object:hover .exit{
+    display: block;
 }
