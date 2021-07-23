@@ -7,8 +7,7 @@
     overflow: hidden;
 }
 #background{
-    background: linear-gradient(90deg, rgba(255,0,0,1) 10%, rgba(0,255,0,1) 50%, rgba(0,0,255,1) 90%);
-    background:  linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,0,1) 60%, rgba(0,0,255,1) 80%, rgba(0,0,255,1) 100%);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33%, rgba(0,255,0,1) 33%, rgba(0,255,0,1) 66%, rgba(0,0,255,1) 66%, rgba(0,0,255,1) 100%);
 }
 /* #red{
     background-color: rgb(255, 0, 0);

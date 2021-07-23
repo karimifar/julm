@@ -57,7 +57,7 @@ function changeBlend(){
 $('#bg-btn').on('click', function(){
     if($(this).hasClass('soft')){
         $(this).removeClass('soft')
-        $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 20%, rgba(0,255,0,1) 40%, rgba(0,255,0,1) 60%, rgba(0,0,255,1) 80%, rgba(0,0,255,1) 100%)')
+        $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33%, rgba(0,255,0,1) 33%, rgba(0,255,0,1) 66%, rgba(0,0,255,1) 66%, rgba(0,0,255,1) 100%)')
         $(this).text('Soft Background')
     }else{
         $(this).addClass('soft')
