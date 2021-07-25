@@ -21,17 +21,39 @@
     <title>Color Impracticum</title>
 </head>
 <body>
-    <header>
-
+    <header class="collapsed">
+        <div id="dark-switch">
+            <i class="fas fa-adjust"></i>
+        </div>
+        <div id="side-nav" >
+            <div id="nav-btn" class=""><i class='fa fa-bars'></i></div>
+            <div id="nav-menu" >
+                <ul class="list-unstyled">
+                    <li class="nav-item active">
+                        <a href="./">Home</a>
+                    </li>
+                    <li class="nav-item multiple">
+                        <p class="dropdown-head" id="prompts">
+                            Prompts
+                        </p>
+                        <div class="drop-items-menu" aria-labelledby="prompts">
+                            <a class="drop-item" href="./prompt1/">Prompt1</a>
+                            <a class="drop-item" href="./prompt2/">Prompt2</a>
+                            <a class="drop-item" href="./prompt3/">Prompt3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
     </header>
+    
     <div class="body-content">
         <div id="bg-grid">
             <div class="grid-wrap" id="grid-h-wrap"></div>
             <div class="grid-wrap" id="grid-v-wrap"></div>
         </div>
-        <div id="dark-switch">
-            <i class="fas fa-adjust"></i>
-        </div>
+        
         <section id='section1'>
             <div class="julm-container sec1-container">
                 <div id="site-title">
@@ -196,5 +218,6 @@
         </footer>
     </div>
     <script src= "./assets/js/home.js"></script>
+    <script src= "./assets/js/script.js"></script>
 </body>
 </html>

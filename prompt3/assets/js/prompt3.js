@@ -33,7 +33,7 @@ $('.object-nav-item').on('click', function(){
         rockClass = 'appended-rock'
     }
     var div = $('<div class="appended-object appended-'+object+' '+rockClass+'" ></div>')
-    div.append('<div class="exit" data-target=".appended-'+object+'"><i class="fas fa-eraser"></i></div>')
+    div.append('<div class="exit" data-target=".appended-'+object+'">X</div>')
     $('#foreground').append(div.append(img))
     $('.appended-object').draggable();
     $('.appended-object').resizable({ 

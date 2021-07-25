@@ -25,7 +25,7 @@ section{
 }
 .grid-wrap{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -38,17 +38,7 @@ section{
 .grid-h{
     border-top: 1px solid #ddd;
 }
-#dark-switch{
-    position: fixed;
-    top:30px;
-    right:10%;
-    padding: 5px;
-    cursor: pointer;
-    z-index: 3;
-}
-#dark-switch i{
-    transform: rotate(45deg)
-}
+
 .julm-container{
     width: 100%;
     height: 100%;
@@ -89,7 +79,7 @@ p{
     /* transition: all 0.1s ease-in-out; */
 }
 #site-title:hover h1{
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: linear-gradient(90deg, rgba(255,0,194,1) 10%, rgba(255,0,29,1) 20%, rgba(254,0,255,1) 30%, rgba(255,0,158,1) 40%, rgba(255,54,94,1) 50%, rgba(255,113,23,1) 60%, rgba(255,74,0,1) 70%, rgba(255,59,87,1) 80%, rgba(255,0,194,1) 90%);
     /* background: url("object-11.png"); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -164,7 +154,7 @@ footer{
     z-index: 3;
     background: #ffffffd2;
 }
-.body-content.dark footer{
+body.dark footer{
     background: #222222d2;
 }
 .footer-wrap p{
@@ -172,9 +162,7 @@ footer{
     font-weight: 200;
     text-align: center;
 }
-a, a:hover{
-    color: unset;
-}
+
 a:hover{
     opacity: 80%;
 }
@@ -182,14 +170,14 @@ a:hover{
 .dark{
     color: #fff;
 }
-.body-content.dark{
+body.dark{
     background-color: #222;
     color: #fff;
 }
-.body-content.dark *{
+body.dark *{
     border-color: #fff !important;
 }
-.body-content.dark .grid-wrap div{
+body.dark .grid-wrap div{
     border-color: #444 !important;
 }
 

@@ -1,6 +1,6 @@
 $('#dark-switch').on('click', function(){
     console.log('switch')
-    $('p, .body-content').toggleClass('dark')
+    $('p, body').toggleClass('dark')
 })
 
 var gridH = 15
