@@ -29,7 +29,7 @@ $('.object-nav-item').on('click', function(){
     var object = 'object-'+$(this).data('object');
     var img = $('<img src="./assets/img/objects/'+object+'.png">');
     var rockClass;
-    if($(this).data('object')<objectN-1){
+    if($(this).data('object')<objectN){
         rockClass = 'appended-rock'
     }
     var div = $('<div class="appended-object appended-'+object+' '+rockClass+'" ></div>')
