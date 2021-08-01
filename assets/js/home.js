@@ -15,3 +15,11 @@ function createGrid(h,v){
     }
 }
 createGrid(gridH,gridV)
+
+$('.obj-wrap').hover(function(){
+    var target = $(this).data('target');
+    $(target).css('display', 'block')
+}, function(){
+    var target = $(this).data('target');
+    $(target).css('display', 'none')
+})

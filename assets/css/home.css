@@ -66,6 +66,7 @@ p{
 #site-title{
     margin-bottom: 10%;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 #site-title h1{
@@ -75,6 +76,7 @@ p{
     line-height: 1em;
     margin-bottom: -0.15em;
     width: fit-content;
+    width: -moz-fit-content;
     user-select: none;
     /* transition: all 0.1s ease-in-out; */
 }
@@ -107,6 +109,33 @@ p{
 #section3 .title{
     display: flex;
 }
+#section3 .sec-content{
+    width:100%;
+    display: flex;
+    padding: 0;
+    margin-top: -1px;
+}
+#objectives{
+    width: 60%;
+}
+#objectives-icons{
+    width: 40%;
+    align-self: center;
+}
+.obj-icon{
+    display: none;
+}
+.obj-line{
+    fill:none;
+    stroke:#222;
+    stroke-width:0.75;
+    stroke-miterlimit:10;
+}
+body.dark .obj-line{
+    stroke:#fff;
+}
+
+
 #section3  .title h2{
     font-style: italic;
     font-weight: 200;
@@ -115,11 +144,13 @@ p{
     width: 40%;
     align-self: flex-end;
     margin-bottom: 0;
+    padding-bottom: 10px;
 }
 #section3 .title .spacer{
     width:60%;
 }
 .obj-wrap{
+    margin-right: 30px;
     display: flex;
     border-top: 1px solid #222;
 }
@@ -145,6 +176,58 @@ p{
     margin-bottom: 0;
     font-size: 24px;
 }
+
+#section4{
+    position: relative;
+    width:100%;
+    padding-bottom: 100vh;
+    overflow: hidden;
+}
+#sec4-bg, #sec4-fg{
+    position: absolute;
+    padding:5%;
+    width: 100%;
+    height: 100%;
+    /* padding-bottom: 40%; */
+    overflow: hidden;
+    top:0;
+    left:0;
+}
+#sec4-fg .sec4-container{
+    padding: 20px 5%;
+    display: block;
+    position: relative;
+}
+
+.sec4-container h2{
+    flex-grow: unset;
+    margin-top: 2%;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 10px;
+    border-top: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+#sec4-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#sec4-fg .lecture-wrap{
+    position: absolute; 
+}
+#lecture1{
+    bottom: 15%;
+    left: 10%;
+    width: 40%;
+}
+#lecture2{
+    top: 10%;
+    right: 20%;
+    width: 30%;
+}
+
 
 footer{
     border-top: 1px solid #ddd;
