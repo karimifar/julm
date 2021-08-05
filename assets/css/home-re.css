@@ -1,0 +1,195 @@
+@media only screen and (max-width: 1440px) {
+    #site-title h1{
+        font-size: 120px;
+    }
+    .julm-container .sec-content{
+        width: 70%;
+    }
+    #section3  .title h2{
+        width: 30%;
+    }
+    #section3 .title .spacer{
+        width:70%;
+    }
+    #objectives{
+        width: 70%;
+    }
+    #objectives-icons{
+        width: 30%;
+    }
+    
+}
+@media only screen and (max-width: 1199px) {
+    section{
+        padding: 5%;
+    }
+    #sec4-fg .sec4-container{
+        padding:5%;
+    }
+    .grid-v:nth-child(5n){
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 991px) {
+    p{
+        font-size: 18px;
+    }
+    #section1{
+        padding: 40px 5%;
+    }
+    header{
+        padding-right: 5%;
+    }
+    #site-title h1{
+        font-size: 100px;
+    }
+    #site-title{
+        margin-bottom: 20%;
+    }
+    #quote p{
+        font-size: 32px;
+    }
+    .julm-container h2, #section3 .title h2{
+        font-size: 48px;
+    }
+    .grid-v:nth-child(4n){
+        display: none;
+    }
+    .julm-container .sec-content{
+        padding: 0 10px;
+    }
+    
+    .julm-container{
+        flex-wrap: wrap;
+    }
+    .julm-container .sec-content{
+        width: 100%;
+    }
+    .julm-container h2{
+        width: 100%;
+        border-top: none;
+        border-bottom: 1px solid #222;
+        padding-bottom: 10px;
+        margin:0;
+        margin-bottom: 40px;
+
+    }
+    #section3 .title{
+        flex-wrap: wrap;
+    }
+    
+    #section3 .title h2{
+        width: 100%;
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+        /* border-botto%m: none; */
+    }
+    .obj-wrap{
+        margin-right: 0;
+    }
+    .obj-wrap:first-child{
+        border-top:none;
+    }
+    .obj-wrap:last-child{
+        border-bottom:none;
+    }
+    #section3 .title .spacer{
+        width:100%;
+    }
+    #objectives{
+        width: 100%;
+    }
+    #objectives-icons{
+        display: none;
+    }
+
+    #sec4-fg{
+        overflow: scroll;
+        position: relative;
+    }
+    #sec4-bg{
+        width: 100%;
+        height: 100%;
+    }
+    #section4{
+        padding-bottom: 5%;
+    }
+    #lectures{
+        position: relative;
+        width:100%;
+        height: 100%;
+    }
+    .lecture-wrap{
+        width: 100% !important;
+        position: relative !important;
+        height: auto;
+        top: unset !important;
+        left: unset !important;
+        right: unset !important;
+        bottom: unset !important;
+    }
+    .lecture-wrap img{
+        height: auto;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    p{
+        font-size: 14px;
+        font-weight: 300;
+    }
+    #site-title h1{
+        font-size: 72px;
+        letter-spacing: -4px;
+    }
+    .julm-container h2, #section3 .title h2{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    #quote{
+        width: 80%;
+    }
+    #quote p{
+        font-size: 24px;
+    }
+
+    .obj-wrap .no{
+        font-size: 48px;
+        width: 80px
+    }
+    .obj-wrap .obj{
+        width: calc(100% - 80px);
+    }
+    .obj-wrap .obj p{
+        font-size: 18px;
+    }
+
+
+}
+@media only screen and (max-width: 575px) {
+    #site-title h1{
+        font-size: 56px;
+    }
+    .julm-container h2, #section3 .title h2{
+        font-size: 28px;
+    }
+    #quote{
+        width: 100%;
+    }
+    #quote p{
+        font-size: 20px;
+    }
+
+    .obj-wrap .no{
+        font-size: 36px;
+        width: 70px
+    }
+    .obj-wrap .obj{
+        width: calc(100% - 70px);
+    }
+    .obj-wrap .obj p{
+        font-size: 14px;
+    }
+    
+}
