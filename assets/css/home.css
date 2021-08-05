@@ -206,9 +206,11 @@ body.dark .obj-line{
     width: fit-content;
     width: -moz-fit-content;
     padding: 10px;
-    border-top: none;
-    border-bottom: 1px solid #fff;
+    width: 40%;
+    /* border-top: none; */
+    /* border-bottom: 1px solid #fff; */
     color: #fff;
+    border-color: #fff;
 }
 #sec4-bg img{
     width: 100%;
