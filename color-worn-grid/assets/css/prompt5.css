@@ -1,6 +1,10 @@
 body{
     /* background-color: aqua; */
 }
+.main-view{
+    padding: 30px 10px;
+    height: auto;
+}
 #grid-container{
     /* position: absolute; */
     width: 85%;
@@ -24,12 +28,7 @@ body{
     position: relative;
     /* background-color: beige; */
 }
-/* .cell::before{
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-    grid-area: 1 / 1 / 2 / 2;
-} */
+
 .cell .img-wrap{
     width: 100%;
     position: relative;
