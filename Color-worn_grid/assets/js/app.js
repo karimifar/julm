@@ -3,7 +3,7 @@ for(var i=1; i<25;i++){
     if(i>15){
         j = Math.ceil(Math.random() * 15)
     }
-    $('#grid').append('<div class="cell" data-click=0><img src="./assets/img/brick_'+j+'.png"></div>')
+    $('#grid').append('<div class="cell" data-click=0><div class="img-wrap"><img src="./assets/img/brick_'+j+'.png"></div></div>')
 }
 $('.cell').mouseover(function(){
     $('img',this).css('opacity',1)
