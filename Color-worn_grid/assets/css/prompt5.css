@@ -1,0 +1,38 @@
+body{
+    /* background-color: aqua; */
+}
+#grid-container{
+    /* position: absolute; */
+    width: 85%;
+    height: auto;
+    margin: auto;
+    /* background-color: beige; */
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    grid-gap: 2px;
+}
+
+.cell{
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    /* background-color: beige; */
+}
+.cell::before{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.cell img {
+    width: 100%;
+    /* height: 100%;
+    object-fit: contain; */
+    grid-area: 1 / 1 / 2 / 2;
+    display: none;
+}
