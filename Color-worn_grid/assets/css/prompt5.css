@@ -11,7 +11,7 @@ body{
 
 #grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     grid-gap: 2px;
 }
 
@@ -34,5 +34,6 @@ body{
     /* height: 100%;
     object-fit: contain; */
     grid-area: 1 / 1 / 2 / 2;
-    display: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }

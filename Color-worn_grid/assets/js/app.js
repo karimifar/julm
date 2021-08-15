@@ -6,13 +6,18 @@ for(var i=1; i<25;i++){
     $('#grid').append('<div class="cell" data-click=0><img src="./assets/img/brick_'+j+'.png"></div>')
 }
 $('.cell').mouseover(function(){
-    $('img',this).css('display','block')
+    $('img',this).css('opacity',1)
 })
 
 $('.cell').on('click', function(){
     var cell = $(this);
     var clickCount = parseInt(cell.attr('data-click'))
-    clickCount++;
+    if(clickCount ==3){
+        clickCount =1;
+    }else{
+        clickCount++;
+    }
+    
     
     if(clickCount ==1){
         cell.css('background-color', 'yellow')
