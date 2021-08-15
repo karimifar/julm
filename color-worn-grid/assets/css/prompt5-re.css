@@ -5,21 +5,22 @@
     
 }
 @media only screen and (max-width: 991px) {
-    
+    #grid-container{
+        width: 100%;
+        padding: 10px;
+    }
     
 }
 @media only screen and (max-width: 768px) {
-    .main-view{
-        padding: 30px 10px;
-    }
+    
     #grid-container{
         width: 100%;
     }
     #grid{
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-    
+    }  
 }
+
 @media only screen and (max-width: 575px) {
     
 }

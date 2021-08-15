@@ -1,14 +1,12 @@
 body{
     /* background-color: aqua; */
 }
-.main-view{
-    padding: 30px 10px;
-    height: auto;
-}
+
 #grid-container{
     /* position: absolute; */
     width: 85%;
     height: auto;
+    padding: 20px;
     margin: auto;
     /* background-color: beige; */
 }
