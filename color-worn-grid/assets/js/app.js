@@ -12,8 +12,8 @@ $('.cell').mouseover(function(){
 $('.cell').on('click', function(){
     var cell = $(this);
     var clickCount = parseInt(cell.attr('data-click'))
-    if(clickCount ==3){
-        clickCount =1;
+    if(clickCount ==6){
+        clickCount =0;
     }else{
         clickCount++;
     }
@@ -23,8 +23,16 @@ $('.cell').on('click', function(){
         cell.css('background-color', 'yellow')
     }else if(clickCount == 2){
         cell.css('background-color', 'red')
-    }else{
+    }else if(clickCount ==3){
         cell.css('background-color', 'blue')
+    }else if(clickCount ==4){
+        cell.css('background-color', 'rgb(0, 255, 255)')
+    }else if(clickCount ==5){
+        cell.css('background-color', 'rgb(0, 255, 0)')
+    }else if(clickCount ==6){
+        cell.css('background-color', 'rgb(255,0,255)')
+    }else{
+        cell.css('background-color', '#fff')
     }
 
     $(this).attr('data-click',clickCount)
