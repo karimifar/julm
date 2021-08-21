@@ -1,0 +1,25 @@
+
+#full-screen-img{
+    /* background-color: #00000011; */
+    position: relative;
+    /* margin:auto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 75%;
+}
+
+.main-view{
+    background: linear-gradient(90deg, #ee3989 0%, #f9e173 100%);
+}
+
+#rock{
+    cursor: pointer;
+}
+.color-item{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;cursor: pointer;
+}
+

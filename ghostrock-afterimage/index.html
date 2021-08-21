@@ -15,12 +15,12 @@
     <script src="https://kit.fontawesome.com/b5e77ab30a.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/prompt5.css">
-    <link rel="stylesheet" href="./assets/css/prompt5-re.css">
-    <title>Color-worn Grid</title>
+    <link rel="stylesheet" href="./assets/css/ex1.css">
+    <link rel="stylesheet" href="./assets/css/ex1-re.css">
+    <title>Ghostrock/Afterimage</title>
 </head>
 <body>
-    <header class="collapsed">
+    <header class="collapsed dark">
         <!-- <div id="dark-switch">
             <i class="fas fa-adjust"></i>
         </div> -->
@@ -47,10 +47,48 @@
         
     </header>
     <div class="body-content">
+        <div id="toolbar" class="toolbar-wrap ">
+            <div id="tools" class="">
+                <div class="controls">
+                    <div id="delay-control">
+                        <p class='control-title'>Time</p>
+                        <div class="btn-group" id="delay" role="group" aria-label="Choose delay">
+                            <input type="radio" class="btn-check" name="btnradio" id="btn-short" value="shr" >
+                            <label class="julm-btn" for="btn-short">Short</label>
+                            
+                            <input type="radio" class="btn-check" name="btnradio" id="btn-medium" value="med" checked>
+                            <label class="julm-btn" for="btn-medium">Medium</label>
+                            
+                            <input type="radio" class="btn-check" name="btnradio" id="btn-long" value="lng">
+                            <label class="julm-btn" for="btn-long">Long</label>
+                        </div>
+                    </div>
+                    <div class="color-control">
+                        <p class='control-title'>Color</p>
+                        <button class="julm-btn" id="test">Refresh</button>
+                    </div>
+                    
+                </div>
+                
+                <div id=rock-nav-wrap>
+                    <p class='control-title'>Form</p>
+                
+                    <div id="rock-nav">
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="tools-handle">
+                <i id="arrow" class="fas fa-angle-double-left"></i>
+            </div>
+            
+        </div>
         <div class="main-view">
-            <div id="grid-container">
-                <div id="grid">
-
+            
+            <div id="full-screen-img" class="image-wrap">
+                
+                <img id="displayRock" src="./assets/img/rocks/rock_7.png" alt="image of a rock">
+                <div id="circle">
                 </div>
             </div>
         </div>

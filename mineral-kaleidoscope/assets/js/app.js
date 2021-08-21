@@ -1,7 +1,7 @@
 var w = window.innerWidth;
 var h = window.innerHeight;
 
-var spinnerN = 8;
+var spinnerN = 10;
 
 for (var i =1; i<=spinnerN; i++){
     if(i==1){

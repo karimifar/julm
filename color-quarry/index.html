@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="../assets/js/jquery.ui.touch-punch.min.js" integrity=""></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/yui0fmm.css">
     <!-- BOOTSTRAP CDN -->
@@ -15,12 +18,12 @@
     <script src="https://kit.fontawesome.com/b5e77ab30a.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/ex2.css">
-    <link rel="stylesheet" href="./assets/css/ex2-re.css">
-    <title>Exercise 1</title>
+    <link rel="stylesheet" href="./assets/css/prompt3.css">
+    <link rel="stylesheet" href="./assets/css/prompt3-re.css">
+    <title>Color quarry</title>
 </head>
 <body>
-    <header class="collapsed">
+    <header class="collapsed dark">
         <!-- <div id="dark-switch">
             <i class="fas fa-adjust"></i>
         </div> -->
@@ -37,8 +40,8 @@
                         </p>
                         <div class="drop-items-menu" aria-labelledby="prompts">
                             <a class="drop-item" href="../prompt1/">Prompt1</a>
-                            <a class="drop-item" href="#">Prompt2</a>
-                            <a class="drop-item" href="../prompt3/">Prompt3</a>
+                            <a class="drop-item" href="../prompt2/">Prompt2</a>
+                            <a class="drop-item" href="#">Prompt3</a>
                         </div>
                     </li>
                 </ul>
@@ -49,15 +52,18 @@
     <div class="body-content">
         <div id="toolbar" class="toolbar-wrap">
             <div id="tools" class="">
-                <div id="timeControl">
-                    <p class='control-title'>Speed</p>
-                    <input type="range" min="20" max="1000" value="41" class="slider"  id="timeRange">
-                    <span id="textInput">30 ms</span>
+                <div id="blend-control">
+                    <p class='control-title'>Blend mode</p>
+                    <select name="blend-mode" id="blend-mode" onchange="changeBlend()">
+                    </select>
                 </div>
-                <div id='spinner-nav-wrap'>
+                <div id="bg-control">
+                    <button id="bg-btn" class="julm-btn">Soft background</button>
+                </div>
+                <div id='object-nav-wrap'>
                     <p class='control-title'>Form</p>
                 
-                    <div id="spinner-nav">
+                    <div id="object-nav">
                         
                     </div>
                 </div>
@@ -68,15 +74,15 @@
             
         </div>
         <div class="main-view">
-            
-            <div id="full-screen-img" class="image-wrap">
-                
-                <img id="spinner" src="./assets/img/spinners/Spinner_1.png" alt="spinner">
+            <div id="background" class="d-flex">
+               
+            </div>
+            <div id="foreground">
 
             </div>
         </div>
     </div>
-    <script src= "./assets/js/app.js"></script>
     <script src= "../assets/js/script.js"></script>
+    <script src= "./assets/js/prompt3.js"></script>
 </body>
 </html>
