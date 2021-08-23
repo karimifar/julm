@@ -5,6 +5,7 @@ window.onresize = function(event) {
     h = window.innerHeight;
     // resetSizes();
 };
+var percent = 0;
 
 $('#tools-handle').on('click',function(){
     $('#toolbar').toggleClass('closed')
@@ -21,7 +22,7 @@ var rocksData = [
     },
     {
         rock: '2',
-        colors: ['#ee3989', '#0b0ab3']
+        colors: ['#0b0ab3','#ee3989']
     },
     {
         rock: '3',
@@ -29,7 +30,7 @@ var rocksData = [
     },
     {
         rock: '4',
-        colors: ['#e23228', '#26b614']
+        colors: ['#26b614','#e23228']
     },
     {
         rock: '5',
@@ -37,10 +38,11 @@ var rocksData = [
     },
     {
         rock: '6',
-        colors: ['#28e2d8', '#df8914']
+        colors: ['#df8914','#28e2d8']
     },
 ]
-
+var color1 = rocksData[0].colors[0];
+var color2 = rocksData[0].colors[1];
 
 $('#rock').on('click', function(){
     var imgName = $(this).data('name')
@@ -59,17 +61,35 @@ $('#rock').on('click', function(){
 for(var i=0;i<rocksData.length; i++){
     var rock = 'rock'+rocksData[i].rock
     var colorItem = $('<div class="color-item" data-target='+rock+'>')
-    var gradient = 'linear-gradient(90deg,'+ rocksData[i].colors[0]+' 0%,'+ rocksData[i].colors[1]+' 100%)'
+    var c1 = rocksData[i].colors[0];
+    var c2 = rocksData[i].colors[1];
+    var gradient = createGrad(c1,c2,percent)
     colorItem.css('background',gradient)
-    colorItem.data('gradient',gradient)
+    colorItem.data('c1',c1)
+    colorItem.data('c2',c2)
     $('#colors-wrap').append(colorItem)
 }
 
 $('.color-item').on('click', function(){
     var rock = $(this).data('target')
-    var gradient = $(this).data('gradient')
+    color1 = $(this).data('c1')
+    color2 = $(this).data('c2')
+    console.log(color1,color2)
+    var gradient = createGrad(color1,color2,percent)
     $('#rock').attr('src','./assets/img/rocks/'+rock+'.png' )
     $('#rock').data('name',rock)
     $('.main-view').css('background',gradient )
 
 })
+
+$('#gradientRange').on('input', function() {
+    percent = $(this).val()
+    var grad= createGrad(color1, color2,percent)
+    $('.main-view').css('background', grad )
+});
+
+function createGrad(c1,c2,p){
+    var grad = 'linear-gradient(90deg, '+ c1+' '+p +'%, '+ c2+' 100%)'
+    console.log(grad)
+    return grad
+}
