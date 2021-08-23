@@ -5,7 +5,8 @@ window.onresize = function(event) {
     h = window.innerHeight;
     // resetSizes();
 };
-var percent = 0;
+var p1 = 0;
+var p2 = 100;
 
 $('#tools-handle').on('click',function(){
     $('#toolbar').toggleClass('closed')
@@ -63,7 +64,7 @@ for(var i=0;i<rocksData.length; i++){
     var colorItem = $('<div class="color-item" data-target='+rock+'>')
     var c1 = rocksData[i].colors[0];
     var c2 = rocksData[i].colors[1];
-    var gradient = createGrad(c1,c2,percent)
+    var gradient = createGrad(c1,c2,p1,p2)
     colorItem.css('background',gradient)
     colorItem.data('c1',c1)
     colorItem.data('c2',c2)
@@ -75,7 +76,7 @@ $('.color-item').on('click', function(){
     color1 = $(this).data('c1')
     color2 = $(this).data('c2')
     console.log(color1,color2)
-    var gradient = createGrad(color1,color2,percent)
+    var gradient = createGrad(color1,color2,p1,p2)
     $('#rock').attr('src','./assets/img/rocks/'+rock+'.png' )
     $('#rock').data('name',rock)
     $('.main-view').css('background',gradient )
@@ -84,12 +85,20 @@ $('.color-item').on('click', function(){
 
 $('#gradientRange').on('input', function() {
     percent = $(this).val()
-    var grad= createGrad(color1, color2,percent)
+    if(percent>50){
+        p1 = percent-50;
+    }else{
+        console.log(percent)
+        p2 = parseInt(percent) + 50;
+        console.log(p2)
+    }
+    var grad= createGrad(color1, color2,p1,p2)
     $('.main-view').css('background', grad )
 });
 
-function createGrad(c1,c2,p){
-    var grad = 'linear-gradient(90deg, '+ c1+' '+p +'%, '+ c2+' 100%)'
+function createGrad(c1,c2,p1,p2){
+    var grad = 'linear-gradient(90deg, '+ c1+' '+p1 +'%, '+ c2+' '
+    +p2+'%)'
     console.log(grad)
     return grad
 }
