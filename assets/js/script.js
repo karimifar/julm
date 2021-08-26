@@ -1,5 +1,14 @@
+$('#nav-btn').mouseenter(function(){
+    $('header').removeClass('collapsed')
+    // $('#nav-btn i').removeClass('fa-bars')
+    // $('#nav-btn i').addClass('fa-times')
+})
+$('#nav-menu').mouseleave(function(){
+    $('header').addClass('collapsed')
+})
+
 $('#nav-btn').on('click', function(){
     $('header').toggleClass('collapsed')
-    $('#nav-btn i').toggleClass('fa-bars')
-    $('#nav-btn i').toggleClass('fa-times')
+    // $('#nav-btn i').toggleClass('fa-bars')
+    // $('#nav-btn i').toggleClass('fa-times')
 })

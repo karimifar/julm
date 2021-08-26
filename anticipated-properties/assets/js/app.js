@@ -87,9 +87,11 @@ $('#gradientRange').on('input', function() {
     percent = $(this).val()
     if(percent>50){
         p1 = percent-50;
+        p2 = 100
     }else{
         console.log(percent)
         p2 = parseInt(percent) + 50;
+        p1=0
         console.log(p2)
     }
     var grad= createGrad(color1, color2,p1,p2)
