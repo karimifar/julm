@@ -44,10 +44,11 @@ header.dark i{
     text-align: right;
     position: relative;
     padding:10px ;
-    background: linear-gradient(90deg, #ffffff02 0%, #ffffff66 100%);
+    padding-left: 50px;
+    background: linear-gradient(90deg, #ffffff05 0%, #ffffffbb 100%);
 }
 .dark #side-nav{
-    background: linear-gradient(90deg, #22222202 0%, #22222266 100%);
+    background: linear-gradient(90deg, #22222205 0%, #222222bb 100%);
 }
 .collapsed #side-nav{
     background: transparent;

@@ -27,7 +27,7 @@ var rocksData = [
     },
     {
         rock: '3',
-        colors: ['#eb4a1b', '#046daa']
+        colors: ['#046daa','#eb4a1b']
     },
     {
         rock: '4',
