@@ -22,8 +22,15 @@
     padding-bottom: 140%;
     background-color: rgba(0, 255, 255, 0.269);
     box-shadow: #444 0 0 3px;
+    position: relative;
 }
-.card-pos *{
+/* .card-pos *{
+    position: absolute;
+} */
+.card-wrap p {
+    position: absolute;
+}
+.card-wrap img{
     position: absolute;
 }
 #card-wrap-2{
