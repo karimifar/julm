@@ -11,7 +11,7 @@ window.onresize = function(event) {
 $('#tools-handle').on('click',function(){
     $('#toolbar').toggleClass('closed')
 })
-var cardW = 8;
+var cardW = 10;
 var cardH = cardW*w/h*1.4;
 var totalMargin = 100 - (5 * cardW);
 var marginUnit = totalMargin/15;
@@ -28,46 +28,56 @@ var board = [
     },
     {
         num: 1,
-        pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
+        pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH],
+        text: 'this covers'
     },
     {
         num: 2,
-        pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
+        pos: [(7.5*marginUnit)+2*cardW, 4.7*marginUnit + cardH],
+        text: 'this crosses'
     },
     {
         num: 3,
-        pos: [(7.5*marginUnit)+2*cardW, 4*marginUnit + 2*cardH]
+        pos: [(7.5*marginUnit)+2*cardW, 4*marginUnit + 2*cardH],
+        text: 'this crowns'
     },
     {
         num: 4,
-        pos: [6.5*marginUnit + cardW, 3*marginUnit + cardH]
+        pos: [6.5*marginUnit + cardW, 3*marginUnit + cardH],
+        text: 'this is what was'
     },
     {
         num: 5,
-        pos: [(7.5*marginUnit)+2*cardW, 2*marginUnit]
+        pos: [(7.5*marginUnit)+2*cardW, 2*marginUnit],
+        text: 'this is what is'
     },
     {
         num: 6,
-        pos: [(8.5*marginUnit)+3*cardW, 3*marginUnit + cardH]
+        pos: [(8.5*marginUnit)+3*cardW, 3*marginUnit + cardH],
+        text: 'this is what will be'
     },
     {
         num: 7,
-        pos: [(10.5*marginUnit)+4*cardW, 4*marginUnit/2 + 3*cardH]
+        pos: [(10.5*marginUnit)+4*cardW, 4*marginUnit/2 + 3*cardH],
+        text: 'this is inside'
     },
     {
         num: 8,
-        pos: [(10.5*marginUnit)+4*cardW, 3*marginUnit/2 + 2*cardH]
+        pos: [(10.5*marginUnit)+4*cardW, 3*marginUnit/2 + 2*cardH],
+        text: 'this is outside'
     },
     {
         num: 9,
-        pos: [(10.5*marginUnit)+4*cardW, 2*marginUnit/2 + 1*cardH]
+        pos: [(10.5*marginUnit)+4*cardW, 2*marginUnit/2 + 1*cardH],
+        text: 'this is the unknown'
     },
     {
         num: 10,
-        pos: [(10.5*marginUnit)+4*cardW, marginUnit/2]
+        pos: [(10.5*marginUnit)+4*cardW, marginUnit/2],
+        text: 'this is the end'
     },
 ]
-
+var progress = 0;
 
 for(var i =0; i<board.length; i++){
     var card_pos = $('<div class="card-pos" id="card-pos-'+i+'">')
@@ -79,84 +89,113 @@ for(var i =0; i<board.length; i++){
     $('#board').append(card_pos)
 }
 
-
-for (var i=0; i<cards.design.length; i++){
-    // var img = 
-    for(var j=0; j<cards.colors.length; j++){
-        var img = 'card_'+cards.design[i] + '_'+cards.colors[j]
-        cards.images.push(img)
+function createImgArr(){
+    cards.images = []
+    for (var i=0; i<cards.design.length; i++){
+        // var img = 
+        for(var j=0; j<cards.colors.length; j++){
+            var img = 'card_'+cards.design[i] + '_'+cards.colors[j]
+            cards.images.push(img)
+        }
     }
 }
+
 console.log(cards.images)
+createImgArr();
 shuffleCards(cards.images)
 
 function shuffleCards(imgArr){
+    $('.card-wrap').empty();
+    $('.card-wrap').removeClass('played');
     for (var i = imgArr.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = imgArr[i];
         imgArr[i] = imgArr[j];
         imgArr[j] = temp;
     }
-    for(var q=0; q<imgArr.length;q++){
-        var imgUrl = './assets/img/cards/'+imgArr[q]+'.png'
-        var img = $('<img src="'+imgUrl+'">' )
-        $('#card-wrap-0').append(img)
-        img.css('left', q/2+'px')
-        // img.css('top', q/2+'px')
-    }
+    var deck = $('<img src="./assets/img/card_back.png">');
+    $('#card-wrap-0').empty()
+    $('#card-wrap-0').append(deck)
+    // for(var q=0; q<imgArr.length;q++){
+    //     // var imgUrl = './assets/img/cards/'+imgArr[q]+'.png'
+    //     var img = $('<img src="./assets/img/card_back.png">' )
+    //     $('#card-wrap-0').append(img)
+    //     // img.css('left', q+'px')
+    //     img.data('name',imgArr[q] )
+    //     // img.css('top', q/2+'px')
+    // }
 
 }
 
+function playCard(){
+    if(progress>9){
+        createImgArr()
+        shuffleCards(cards.images);
+        progress = 0;
+    }else{
+        var img = cards.images[0]
+        var imgUrl = './assets/img/cards/'+img+'.png'
+        progress++;
+        var parent = '#card-wrap-'+progress;
+        $(parent).append('<img src="'+imgUrl+'">')
+        $(parent).addClass('played')
+        $('#notif-text').text(board[progress].text)
+        cards.images.splice(0,1)
+    }
+}
+
+$('#card-wrap-0').on('click', function(){
+    playCard();
+})
 function updatePositions(){
-    board = [
-        {
-            num: 0,
-            //3 was 4.5 before
-            pos: [3*marginUnit,5]
-        },
-        {
-            num: 1,
-            pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
-        },
-        {
-            num: 2,
-            pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
-        },
-        {
-            num: 3,
-            pos: [(7.5*marginUnit)+2*cardW, 4*marginUnit + 2*cardH]
-        },
-        {
-            num: 4,
-            pos: [6.5*marginUnit + cardW, 3*marginUnit + cardH]
-        },
-        {
-            num: 5,
-            pos: [(7.5*marginUnit)+2*cardW, 2*marginUnit]
-        },
-        {
-            num: 6,
-            pos: [(8.5*marginUnit)+3*cardW, 3*marginUnit + cardH]
-        },
-        {
-            num: 7,
-            pos: [(10.5*marginUnit)+4*cardW, 4*marginUnit/2 + 3*cardH]
-        },
-        {
-            num: 8,
-            pos: [(10.5*marginUnit)+4*cardW, 3*marginUnit/2 + 2*cardH]
-        },
-        {
-            num: 9,
-            pos: [(10.5*marginUnit)+4*cardW, 2*marginUnit/2 + 1*cardH]
-        },
-        {
-            num: 10,
-            pos: [(10.5*marginUnit)+4*cardW, marginUnit/2]
-        },
-    ]
+    // board = [
+    //     {
+    //         num: 0,
+    //         //3 was 4.5 before
+    //         pos: [3*marginUnit,5]
+    //     },
+    //     {
+    //         num: 1,
+    //         pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
+    //     },
+    //     {
+    //         num: 2,
+    //         pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
+    //     },
+    //     {
+    //         num: 3,
+    //         pos: [(7.5*marginUnit)+2*cardW, 4*marginUnit + 2*cardH]
+    //     },
+    //     {
+    //         num: 4,
+    //         pos: [6.5*marginUnit + cardW, 3*marginUnit + cardH]
+    //     },
+    //     {
+    //         num: 5,
+    //         pos: [(7.5*marginUnit)+2*cardW, 2*marginUnit]
+    //     },
+    //     {
+    //         num: 6,
+    //         pos: [(8.5*marginUnit)+3*cardW, 3*marginUnit + cardH]
+    //     },
+    //     {
+    //         num: 7,
+    //         pos: [(10.5*marginUnit)+4*cardW, 4*marginUnit/2 + 3*cardH]
+    //     },
+    //     {
+    //         num: 8,
+    //         pos: [(10.5*marginUnit)+4*cardW, 3*marginUnit/2 + 2*cardH]
+    //     },
+    //     {
+    //         num: 9,
+    //         pos: [(10.5*marginUnit)+4*cardW, 2*marginUnit/2 + 1*cardH]
+    //     },
+    //     {
+    //         num: 10,
+    //         pos: [(10.5*marginUnit)+4*cardW, marginUnit/2]
+    //     },
+    // ]
     for(var i =0; i<board.length; i++){
-        console.log(board[i].pos[1])
         selector = '#card-pos-'+i;
         $(selector).css('left', board[i].pos[0]+'%')
         $(selector).css('top', board[i].pos[1]+'%')

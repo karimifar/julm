@@ -7,7 +7,26 @@
 }
 
 .main-view{
-    background: url("../img/bg.png");
+    /* background: url("../img/bg.png"); */
+    background: radial-gradient(
+        farthest-side at top left,
+        rgba(180,10, 190, 1),
+        transparent
+        ),
+        radial-gradient(
+        farthest-side at top right,
+        rgba(120, 140, 80, 1),
+        transparent
+        ),
+        radial-gradient(
+        farthest-corner at bottom left,
+        rgba(80,10, 240, 1),
+        transparent
+        ),
+        radial-gradient(
+        farthest-corner at bottom right,
+        rgba(255,10, 40, 1),
+        transparent);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
@@ -15,14 +34,16 @@
 
 .card-pos{
     position: absolute;
-    width:8%;
+    width:10%;
 }
 .card-wrap{
     width: 100%;
     padding-bottom: 140%;
-    background-color: rgba(0, 255, 255, 0.269);
-    box-shadow: #444 0 0 3px;
+    border-radius: 8%;
     position: relative;
+}
+.card-wrap.played{
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px;
 }
 /* .card-pos *{
     position: absolute;
@@ -35,4 +56,12 @@
 }
 #card-wrap-2{
     transform: rotate(90deg);
+}
+#card-wrap-0{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px;
+}
+#notif-text{
+    text-align: center;
+    padding: 10px;
 }
