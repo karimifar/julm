@@ -148,53 +148,63 @@ $('#card-wrap-0').on('click', function(){
     playCard();
 })
 function updatePositions(){
-    // board = [
-    //     {
-    //         num: 0,
-    //         //3 was 4.5 before
-    //         pos: [3*marginUnit,5]
-    //     },
-    //     {
-    //         num: 1,
-    //         pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
-    //     },
-    //     {
-    //         num: 2,
-    //         pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH]
-    //     },
-    //     {
-    //         num: 3,
-    //         pos: [(7.5*marginUnit)+2*cardW, 4*marginUnit + 2*cardH]
-    //     },
-    //     {
-    //         num: 4,
-    //         pos: [6.5*marginUnit + cardW, 3*marginUnit + cardH]
-    //     },
-    //     {
-    //         num: 5,
-    //         pos: [(7.5*marginUnit)+2*cardW, 2*marginUnit]
-    //     },
-    //     {
-    //         num: 6,
-    //         pos: [(8.5*marginUnit)+3*cardW, 3*marginUnit + cardH]
-    //     },
-    //     {
-    //         num: 7,
-    //         pos: [(10.5*marginUnit)+4*cardW, 4*marginUnit/2 + 3*cardH]
-    //     },
-    //     {
-    //         num: 8,
-    //         pos: [(10.5*marginUnit)+4*cardW, 3*marginUnit/2 + 2*cardH]
-    //     },
-    //     {
-    //         num: 9,
-    //         pos: [(10.5*marginUnit)+4*cardW, 2*marginUnit/2 + 1*cardH]
-    //     },
-    //     {
-    //         num: 10,
-    //         pos: [(10.5*marginUnit)+4*cardW, marginUnit/2]
-    //     },
-    // ]
+    board = [
+        {
+            num: 0,
+            //3 was 4.5 before
+            pos: [3*marginUnit,5]
+        },
+        {
+            num: 1,
+            pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH],
+            text: 'this covers'
+        },
+        {
+            num: 2,
+            pos: [(7.5*marginUnit)+2*cardW, 4.7*marginUnit + cardH],
+            text: 'this crosses'
+        },
+        {
+            num: 3,
+            pos: [(7.5*marginUnit)+2*cardW, 4*marginUnit + 2*cardH],
+            text: 'this crowns'
+        },
+        {
+            num: 4,
+            pos: [6.5*marginUnit + cardW, 3*marginUnit + cardH],
+            text: 'this is what was'
+        },
+        {
+            num: 5,
+            pos: [(7.5*marginUnit)+2*cardW, 2*marginUnit],
+            text: 'this is what is'
+        },
+        {
+            num: 6,
+            pos: [(8.5*marginUnit)+3*cardW, 3*marginUnit + cardH],
+            text: 'this is what will be'
+        },
+        {
+            num: 7,
+            pos: [(10.5*marginUnit)+4*cardW, 4*marginUnit/2 + 3*cardH],
+            text: 'this is inside'
+        },
+        {
+            num: 8,
+            pos: [(10.5*marginUnit)+4*cardW, 3*marginUnit/2 + 2*cardH],
+            text: 'this is outside'
+        },
+        {
+            num: 9,
+            pos: [(10.5*marginUnit)+4*cardW, 2*marginUnit/2 + 1*cardH],
+            text: 'this is the unknown'
+        },
+        {
+            num: 10,
+            pos: [(10.5*marginUnit)+4*cardW, marginUnit/2],
+            text: 'this is the end'
+        },
+    ]
     for(var i =0; i<board.length; i++){
         selector = '#card-pos-'+i;
         $(selector).css('left', board[i].pos[0]+'%')
