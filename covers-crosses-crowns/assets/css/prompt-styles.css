@@ -61,7 +61,23 @@
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px;
 }
+#notification{
+    position: absolute;
+    width: 20%;
+    
+}
 #notif-text{
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    width: 100%;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    display: table;
+    padding-right: 5px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+#notif-text.visible{
+    opacity: 1;
 }

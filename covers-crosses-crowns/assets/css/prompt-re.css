@@ -9,7 +9,9 @@
     
 }
 @media only screen and (max-width: 768px) {
-
+    #notif-text{
+        font-size: 12px;
+    }
 }
 @media only screen and (max-width: 575px) {
     

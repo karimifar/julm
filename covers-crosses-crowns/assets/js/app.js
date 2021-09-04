@@ -33,7 +33,7 @@ var board = [
     },
     {
         num: 2,
-        pos: [(7.5*marginUnit)+2*cardW, 4.7*marginUnit + cardH],
+        pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH],
         text: 'this crosses'
     },
     {
@@ -128,6 +128,7 @@ function shuffleCards(imgArr){
 }
 
 function playCard(){
+    $('#notif-text').removeClass('visible')
     if(progress>9){
         createImgArr()
         shuffleCards(cards.images);
@@ -140,6 +141,7 @@ function playCard(){
         $(parent).append('<img src="'+imgUrl+'">')
         $(parent).addClass('played')
         $('#notif-text').text(board[progress].text)
+        $('#notif-text').addClass('visible')
         cards.images.splice(0,1)
     }
 }
@@ -161,7 +163,7 @@ function updatePositions(){
         },
         {
             num: 2,
-            pos: [(7.5*marginUnit)+2*cardW, 4.7*marginUnit + cardH],
+            pos: [(7.5*marginUnit)+2*cardW, 3*marginUnit + cardH],
             text: 'this crosses'
         },
         {
@@ -210,4 +212,8 @@ function updatePositions(){
         $(selector).css('left', board[i].pos[0]+'%')
         $(selector).css('top', board[i].pos[1]+'%')
     }
+    $('#notification').css('left',board[0].pos[0]+'%')
+    $('#notification').css('top',board[0].pos[1]+ 1.5*cardH+ '%')
 }
+$('#notification').css('left',board[0].pos[0]+'%')
+$('#notification').css('top',board[0].pos[1]+ 1.5*cardH+ '%')
