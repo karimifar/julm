@@ -1,3 +1,6 @@
+$('#tools-handle').on('click',function(){
+    $('#toolbar').toggleClass('closed')
+})
 var w = window.innerWidth;
 var h = window.innerHeight;
 window.onresize = function(event) {
@@ -18,9 +21,7 @@ function adjustBoard(){
         $('#board').css('height', w)
     }
 }
-$('#tools-handle').on('click',function(){
-    $('#toolbar').toggleClass('closed')
-})
+
 var cardW = 10;
 var cardH = cardW*w/h*1.4;
 if(cardH<13){
