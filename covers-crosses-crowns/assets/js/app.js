@@ -4,8 +4,8 @@ window.onresize = function(event) {
     w = window.innerWidth;
     h = window.innerHeight;
     cardH = cardW*w/h*1.4;
-    if(cardH<10){
-        cardH= 10;
+    if(cardH<13){
+        cardH= 13;
     }
     updatePositions();
     adjustBoard()
@@ -23,8 +23,8 @@ $('#tools-handle').on('click',function(){
 })
 var cardW = 10;
 var cardH = cardW*w/h*1.4;
-if(cardH<10){
-    cardH= 10;
+if(cardH<13){
+    cardH= 13;
 }
 var totalMargin = 100 - (5 * cardW);
 var marginUnit = totalMargin/15;
