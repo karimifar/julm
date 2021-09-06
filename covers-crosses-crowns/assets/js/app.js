@@ -4,15 +4,28 @@ window.onresize = function(event) {
     w = window.innerWidth;
     h = window.innerHeight;
     cardH = cardW*w/h*1.4;
+    if(cardH<10){
+        cardH= 10;
+    }
     updatePositions();
-    // resetSizes();
+    adjustBoard()
 };
-
+adjustBoard();
+function adjustBoard(){
+    if(w>h){
+        $('#board').css('height', '100%')
+    }else{
+        $('#board').css('height', w)
+    }
+}
 $('#tools-handle').on('click',function(){
     $('#toolbar').toggleClass('closed')
 })
 var cardW = 10;
 var cardH = cardW*w/h*1.4;
+if(cardH<10){
+    cardH= 10;
+}
 var totalMargin = 100 - (5 * cardW);
 var marginUnit = totalMargin/15;
 var cards = {
@@ -95,7 +108,8 @@ function createImgArr(){
         // var img = 
         for(var j=0; j<cards.colors.length; j++){
             var img = 'card_'+cards.design[i] + '_'+cards.colors[j]
-            cards.images.push(img)
+            var black = img + '_2'
+            cards.images.push(img,black)
         }
     }
 }
@@ -212,8 +226,8 @@ function updatePositions(){
         $(selector).css('left', board[i].pos[0]+'%')
         $(selector).css('top', board[i].pos[1]+'%')
     }
-    $('#notification').css('left',board[0].pos[0]+'%')
-    $('#notification').css('top',board[0].pos[1]+ 1.5*cardH+ '%')
+    // $('#notification').css('left',board[0].pos[0]+'%')
+    // $('#notification').css('top',board[0].pos[1]+ 1.5*cardH+ '%')
 }
-$('#notification').css('left',board[0].pos[0]+'%')
-$('#notification').css('top',board[0].pos[1]+ 1.5*cardH+ '%')
+// $('#notification').css('left',board[0].pos[0]+'%')
+// $('#notification').css('top',board[0].pos[1]+ 1.5*cardH+ '%')
