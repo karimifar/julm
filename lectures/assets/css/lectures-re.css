@@ -1,0 +1,36 @@
+@media only screen and (max-width: 1440px) {
+    #site-title h1{
+        /* font-size: 120px; */
+    }
+
+    
+}
+@media only screen and (max-width: 1199px) {
+    section{
+        padding: 20px 5%;
+    }
+
+    .grid-v:nth-child(5n){
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 991px) {
+    p{
+        font-size: 18px;
+    }
+
+    
+}
+@media only screen and (max-width: 768px) {
+    p{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+
+}
+@media only screen and (max-width: 575px) {
+
+    
+}
