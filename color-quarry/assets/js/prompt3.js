@@ -3,9 +3,7 @@ var h = window.innerHeight;
 var objectN = 16
 var blendModes = ['normal','multiply','screen','overlay','darken','lighten','color-dodge','color-burn','hard-light','soft-light','difference','exclusion','hue','saturation','color','luminosity']
 var currendBlend = 'normal';
-$('#tools-handle').on('click',function(){
-    $('#toolbar').toggleClass('closed')
-})
+
 
 for (var i=0; i<blendModes.length; i++){
     var blend = blendModes[i];

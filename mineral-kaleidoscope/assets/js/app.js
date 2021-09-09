@@ -68,11 +68,6 @@ window.onresize = function(event) {
 };
 
 
-$('#tools-handle').on('click',function(){
-    $('#toolbar').toggleClass('closed')
-})
-
-
 $('.spinner-nav-item').on('click', function(){
     var spinner = 'Spinner_' + $(this).data('spinner');
     var img = './assets/img/spinners/'+spinner+'.png';

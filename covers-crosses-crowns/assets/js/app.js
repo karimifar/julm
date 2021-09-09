@@ -1,6 +1,3 @@
-$('#tools-handle').on('click',function(){
-    $('#toolbar').toggleClass('closed')
-})
 var w = window.innerWidth;
 var h = window.innerHeight;
 window.onresize = function(event) {

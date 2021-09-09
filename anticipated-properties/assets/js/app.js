@@ -8,12 +8,6 @@ window.onresize = function(event) {
 var p1 = 0;
 var p2 = 100;
 
-$('#tools-handle').on('click',function(){
-    $('#toolbar').toggleClass('closed')
-})
-
-var spinnerN = 10;
-
 
 
 var rocksData = [

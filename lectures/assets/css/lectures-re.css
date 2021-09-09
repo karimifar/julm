@@ -1,11 +1,12 @@
 @media only screen and (max-width: 1440px) {
-    #site-title h1{
-        /* font-size: 120px; */
-    }
+    
 
     
 }
 @media only screen and (max-width: 1199px) {
+    #site-title h1{
+        font-size: 52px;
+    }
     section{
         padding: 20px 5%;
     }
@@ -13,21 +14,34 @@
     .grid-v:nth-child(5n){
         display: none;
     }
+    .vid-section .julm-container{
+        padding:0 15px;
+    }
     
 }
 @media only screen and (max-width: 991px) {
     p{
         font-size: 18px;
     }
-
+    #tagline h2 {
+        font-size: 32px;
+    }
     
 }
 @media only screen and (max-width: 768px) {
+    #site-title h1{
+        font-size: 40px;
+    }
     p{
         font-size: 14px;
         font-weight: 300;
     }
-
+    #tagline h2 {
+        font-size: 24px;
+    }
+    .vid-section .julm-container{
+        padding:0;
+    }
 
 }
 @media only screen and (max-width: 575px) {

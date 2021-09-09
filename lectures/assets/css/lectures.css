@@ -62,6 +62,12 @@ p{
     width: fit-content;
     width: -moz-fit-content;
 }
+#section1 a{
+    text-decoration: none;
+    width: fit-content;
+    width: -moz-fit-content;
+
+}
 #site-title h1{
     font-weight: 700;
     font-size: 60px;

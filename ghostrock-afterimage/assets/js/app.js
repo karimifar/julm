@@ -127,12 +127,6 @@ $('.rock-nav-item').on('click', function(){
     $('.rock-nav-item.display').css('border-bottom-color',rgb2)
 })
 
-$('#tools-handle').on('click',function(){
-    $('#toolbar').toggleClass('closed')
-})
-
-
-
 
 colorShift();
 resetSizes();

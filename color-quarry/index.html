@@ -18,15 +18,13 @@
     <script src="https://kit.fontawesome.com/b5e77ab30a.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/prompt3.css">
     <link rel="stylesheet" href="./assets/css/prompt3-re.css">
     <title>Color quarry</title>
 </head>
 <body>
-    <header class="collapsed">
-        <!-- <div id="dark-switch">
-            <i class="fas fa-adjust"></i>
-        </div> -->
+    <header class="collapsed dark">
         <div id="side-nav" >
             <div id="nav-btn" class=""><i class='fa fa-bars'></i></div>
             <div id="nav-menu" >
@@ -34,23 +32,31 @@
                     <li class="nav-item active">
                         <a href="../">Home</a>
                     </li>
+                    <li class="nav-item active">
+                        <a href="../lectures/">Course Lectures</a>
+                    </li>
                     <li class="nav-item multiple">
                         <p class="dropdown-head" id="prompts">
                             Prompts
                         </p>
                         <div class="drop-items-menu" aria-labelledby="prompts">
-                            <a class="drop-item" href="../prompt1/">Prompt1</a>
-                            <a class="drop-item" href="../prompt2/">Prompt2</a>
-                            <a class="drop-item" href="#">Prompt3</a>
+                            <a class="drop-item" href="../anticipated-properties/">Departure from Anticipated Properties</a>
+                            <a class="drop-item" href="../covers-crosses-crowns/">This covers / This crosses / This crowns</a>
+                            <a class="drop-item" href="../not-apples/">Obviously these are not apples…</a>
+                            <a class="drop-item" href="../mineral-kaleidoscope/">Mineral Kaleidoscope</a>
+                            <a class="drop-item" href="../aura-palette/">Aura Palette</a>
+                            <a class="drop-item current-nav" href="#">Color Quarry</a>
+                            <a class="drop-item" href="../ghostrock-afterimage/">Ghostrock / Afterimage</a>
                         </div>
                     </li>
+                    
                 </ul>
             </div>
         </div>
         
     </header>
     <div class="body-content">
-        <div id="toolbar" class="toolbar-wrap">
+        <div id="toolbar" class="toolbar-wrap dark closed">
             <div id="tools" class="">
                 <div id="blend-control">
                     <p class='control-title'>Blend mode</p>
