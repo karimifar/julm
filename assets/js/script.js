@@ -12,17 +12,17 @@ $('#nav-btn').on('click', function(){
     // $('#nav-btn i').toggleClass('fa-bars')
     // $('#nav-btn i').toggleClass('fa-times')
 })
-console.log('sctipt')
-// $('#tools-handle').on('click',function(){
-//     $('#toolbar').toggleClass('closed')
-// })
-$('#tools-handle').on({'touchstart' : function(){
-    $('#toolbar').toggleClass('closed')
-    } 
-});
 
-$('#toolbar').hover(function(){
+$('#tools-handle').on('click',function(){
     $('#toolbar').toggleClass('closed')
-},function(){
-    $('#toolbar').toggleClass('closed')
-} )
+})
+// $('#tools-handle').on({'touchstart' : function(){
+//     $('#toolbar').toggleClass('closed')
+//     } 
+// });
+
+// $('#toolbar').hover(function(){
+//     $('#toolbar').toggleClass('closed')
+// },function(){
+//     $('#toolbar').toggleClass('closed')
+// } )
