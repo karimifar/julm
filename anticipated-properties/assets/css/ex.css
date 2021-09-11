@@ -19,7 +19,8 @@
 }
 .color-item{
     width: 100%;
-    height: 30px;
+    height: 20px;
+    border-radius: 2px;
     margin-bottom: 10px;cursor: pointer;
 }
 
