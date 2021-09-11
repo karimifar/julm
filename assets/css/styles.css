@@ -2,6 +2,14 @@
     box-sizing: border-box;
     font-family: halyard-micro, sans-serif;
 }
+img {  
+    user-drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 p{
     font-size: 12px;
     margin-bottom: 5px;
@@ -45,10 +53,10 @@ header.dark i{
     position: relative;
     padding:10px ;
     padding-left: 50px;
-    background: linear-gradient(90deg, #ffffff05 0%, #ffffffbb 100%);
+    /* background: linear-gradient(90deg, #ffffff05 0%, #ffffffbb 100%); */
 }
 .dark #side-nav{
-    background: linear-gradient(90deg, #22222205 0%, #222222bb 100%);
+    /* background: linear-gradient(90deg, #22222205 0%, #222222bb 100%); */
 }
 .collapsed #side-nav{
     background: transparent;
@@ -68,8 +76,8 @@ header.dark i{
 #nav-menu .nav-item{
     /* color: #222; */
     font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-weight: 300;
+    /* text-transform: uppercase; */
     text-align: right;
 }
 .current-nav{
@@ -171,8 +179,8 @@ img{
     z-index: 2;
     display: flex;
 }
-#toolbar.closed{
-    width: 25px;
+#toolbar.closed, #tools-handle{
+    width: 50px;
 }
 #tools{
     height: 100%;
@@ -194,6 +202,7 @@ p.control-title{
     display: none;
 }
 #arrow{
+    margin-left: 5px;
     transition: all 0.5s ease-in-out;
 }
 #toolbar.closed #arrow{
@@ -202,21 +211,21 @@ p.control-title{
 
 #tools-handle{
     transition: all 0.2s ease-in-out;
-    width: 25px;
     /* background-color: #eee; */
-    border-right: 1px solid #222;
+    /* border-right: 1px solid #222; */
     /* border-left: 1px solid #eee; */
     cursor: pointer;
+    padding-top: 40px;
     font-size: 12px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 
 #tools-handle:hover{
-    background: linear-gradient(90deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.2) 100%);
+    /* background: linear-gradient(90deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.2) 100%); */
 }
 
 
@@ -228,7 +237,10 @@ p.control-title{
     color:#fff;
 }
 
-
+.slider{
+    background-color: transparent;
+    width: 100%;
+}
 input[type="range"] {
     -webkit-appearance: none;
 }
@@ -265,12 +277,14 @@ input[type="range"]::-moz-range-thumb {
 
 .dark input[type="range"]::-webkit-slider-runnable-track {
     background: #fff;
+    height: 2px;
 }
    
 .dark input[type="range"]::-moz-range-track {
     background: #fff;
 }
 .dark input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     background: #fff;
 }
    

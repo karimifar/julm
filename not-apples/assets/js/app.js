@@ -9,31 +9,29 @@ $('.cell').mouseover(function(){
     $('img',this).css('opacity',1)
 })
 
+var colors = [
+    '#fff',
+    '#D0E6F5',
+    '#5CB8F7',
+    '#DC0824',
+    '#0F77BA',
+    '#FF00FF',
+    '#08304A',
+    '#CF959C',
+    '#C8D215',
+    '#65B79A',
+    '#F6FAA2',
+]
 $('.cell').on('click', function(){
     var cell = $(this);
     var clickCount = parseInt(cell.attr('data-click'))
-    if(clickCount ==6){
+    if(clickCount ==10){
         clickCount =0;
     }else{
         clickCount++;
     }
-    
-    
-    if(clickCount ==1){
-        cell.css('background-color', 'yellow')
-    }else if(clickCount == 2){
-        cell.css('background-color', 'red')
-    }else if(clickCount ==3){
-        cell.css('background-color', 'blue')
-    }else if(clickCount ==4){
-        cell.css('background-color', 'rgb(0, 255, 255)')
-    }else if(clickCount ==5){
-        cell.css('background-color', 'rgb(0, 255, 0)')
-    }else if(clickCount ==6){
-        cell.css('background-color', 'rgb(255,0,255)')
-    }else{
-        cell.css('background-color', '#fff')
-    }
+    cell.css('background-color', colors[clickCount])
+    console.log(colors[clickCount])
 
     $(this).attr('data-click',clickCount)
     console.log('second',clickCount)

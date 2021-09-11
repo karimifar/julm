@@ -1,13 +1,20 @@
 var w = window.innerWidth;
 var h = window.innerHeight;
 var objectN = 16
-var blendModes = ['normal','multiply','screen','overlay','darken','lighten','color-dodge','color-burn','hard-light','soft-light','difference','exclusion','hue','saturation','color','luminosity']
+var blendModes = [
+    {blend: 'normal', name:'Common'},
+    {blend: 'exclusion', name:'Oppositional light'},
+    {blend:'difference',name:'Shadow ambiance'},
+    {blend:'hue', name:'Prone'},
+    {blend:'hard-light',name:'Achroma'},
+    {blend:'screen', name:'Color apparition'}
+]
 var currendBlend = 'normal';
 
 
 for (var i=0; i<blendModes.length; i++){
-    var blend = blendModes[i];
-    var option = $('<option value='+blend+'>'+blend+'</option>')
+    var blend = blendModes[i].blend;
+    var option = $('<option value='+blend+'>'+blendModes[i].name+'</option>')
     $('#blend-mode').append(option)
 }
 
@@ -63,6 +70,30 @@ $('#bg-btn').on('click', function(){
         $(this).text('Hard Background')
     }
     
+})
+
+
+$('#grounds input').on('click', function(){
+    var ground = $('#grounds input:radio:checked').val();
+    console.log(ground)
+    switch(ground){
+        case 'hard':
+            $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33%, rgba(0,255,0,1) 33%, rgba(0,255,0,1) 66%, rgba(0,0,255,1) 66%, rgba(0,0,255,1) 100%)');
+            $('header').addClass('dark')
+            $('#toolbar').addClass('dark')
+            break;
+        case 'soft':
+            $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 10%, rgba(0,255,0,1) 50%, rgba(0,0,255,1) 90%)');
+            $('header').addClass('dark')
+            $('#toolbar').addClass('dark')
+            break;
+        case 'empty':
+            $('#background').css('background','none');
+            $('header').removeClass('dark')
+            $('#toolbar').removeClass('dark')
+            break;
+
+    }
 })
 
 

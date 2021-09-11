@@ -26,7 +26,12 @@ function setSpots(){
         // });
     }
 }
-
+var angle= 0;
+$('#refresh-btn').on('click', function(){
+    setSpots();
+    angle = angle -360
+    $(this).css('webkit-transform', 'rotate('+angle+'deg)')
+})
 
 
 

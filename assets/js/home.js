@@ -1,3 +1,4 @@
+$('p, body').toggleClass('dark')
 $('#dark-switch').on('click', function(){
     console.log('switch')
     $('p, body').toggleClass('dark')
