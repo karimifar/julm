@@ -109,7 +109,7 @@ function timing(){
     outColor = setTimeout(function(){$('#circle').css('background', 'rgb(255,255,255)')},inTime)
 }
 
-$('#test').on('click', function(){
+$('#color-control').on('click', function(){
     colorShift();
 })
 

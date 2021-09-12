@@ -5,7 +5,7 @@ for(var i=1; i<25;i++){
     }
     $('#grid').append('<div class="cell" data-click=0><div class="img-wrap"><img src="./assets/img/brick_'+j+'.png"></div></div>')
 }
-$('.cell').mouseover(function(){
+$('.cell').bind('mouseover touchstart',function(){
     $('img',this).css('opacity',1)
 })
 

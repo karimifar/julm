@@ -36,9 +36,15 @@ $('#site-title span').hover(function(){
     var color = $(this).data('color')
     $(this).css('transition', 'none')
     $(this).css('color', color)
-}, function(){
+
     var span = $(this);
-    span.css('transition', 'all 1.6s cubic-bezier(0.5, 1, 0.89, 1)')
-    setTimeout(function(){span.css('color', 'unset')},2400)
+    
+    setTimeout(function(){
+        span.css('transition', 'all 1.6s cubic-bezier(0.5, 1, 0.89, 1)')
+        span.css('color', 'unset')
+        
+    },2400)
+}, function(){
+    
 })
 // $(spans[2]).css('color', 'red')

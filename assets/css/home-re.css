@@ -29,6 +29,9 @@
     .grid-v:nth-child(5n){
         display: none;
     }
+    footer{
+        padding: 3% 5% 5% ;
+    }
     
 }
 @media only screen and (max-width: 991px) {
@@ -134,9 +137,7 @@
     .lecture-wrap img{
         height: auto;
     }
-    footer{
-        padding: 3% 5% 5% ;
-    }
+    
     
 }
 @media only screen and (max-width: 768px) {
@@ -201,5 +202,7 @@
     .obj-wrap .obj p{
         font-size: 14px;
     }
-    
+    .footer-wrap p{
+        font-size: 12px;
+    }
 }

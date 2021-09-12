@@ -6,8 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 950px;
-    max-height: 950px;
+    max-width: 850px;
+    max-height: 850px;
 }
 
 #circle{
@@ -51,5 +51,13 @@
 #delay-control{
     margin-bottom: 20px;
 }
-
+#delay{
+    width: 100%;
+}
+#delay label{
+    text-align: center;
+}
+#color-control{
+    width: 100%;
+}
 

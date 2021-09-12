@@ -70,16 +70,21 @@
 }
 #bg-control label{
     line-height: 1.2em;
+    text-align: center;
 }
 #bg-btn{
     text-transform: uppercase;
 }
 #blend-mode{
     text-transform: capitalize;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 #blend-mode label{
     margin-top: -1px;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
 }
 #tools{
     overflow: scroll;

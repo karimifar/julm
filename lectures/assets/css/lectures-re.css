@@ -17,7 +17,9 @@
     .vid-section .julm-container{
         padding:0 15px;
     }
-    
+    footer{
+        padding: 3% 5% 5% ;
+    }
 }
 @media only screen and (max-width: 991px) {
     p{
@@ -26,6 +28,7 @@
     #tagline h2 {
         font-size: 32px;
     }
+    
     
 }
 @media only screen and (max-width: 768px) {
@@ -42,9 +45,14 @@
     .vid-section .julm-container{
         padding:0;
     }
+    .footer-wrap p{
+        font-size: 14px;
+    }
 
 }
 @media only screen and (max-width: 575px) {
-
+    .footer-wrap p{
+        font-size: 12px;
+    }
     
 }

@@ -238,19 +238,19 @@ body.dark .obj-line{
 #somewhere{
     bottom: 15%;
     left: 8%;
-    width: 50%;
+    width: 45%;
     z-index: 2;
 }
 #overview{
     top: 8%;
     right: 16%;
-    width: 40%;
+    width: 32%;
     z-index: 3;
 }
 #color-reading{
-    bottom: 5%;
-    right: 10%;
-    width: 30%;
+    bottom: 8%;
+    right: 14%;
+    width: 24%;
     z-index: 4;
 }
 
