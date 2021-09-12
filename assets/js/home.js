@@ -34,7 +34,7 @@ for(var i=0;i<spans.length; i++){
 
 $('#site-title span').hover(function(){
     var color = $(this).data('color')
-    $(this).css('transition', 'none')
+    $(this).css('transition', 'all 0.2s cubic-bezier(0.5, 1, 0.89, 1)')
     $(this).css('color', color)
 
     var span = $(this);
@@ -43,7 +43,7 @@ $('#site-title span').hover(function(){
         span.css('transition', 'all 1.6s cubic-bezier(0.5, 1, 0.89, 1)')
         span.css('color', 'unset')
         
-    },2400)
+    },2000)
 }, function(){
     
 })
