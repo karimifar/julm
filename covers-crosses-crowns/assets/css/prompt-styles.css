@@ -65,7 +65,8 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 95%;
+    top: 90%;
+    z-index: 10;
     
 }
 #notif-text{

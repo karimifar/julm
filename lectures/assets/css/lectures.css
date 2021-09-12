@@ -98,12 +98,12 @@ p{
  font-weight: 100;
  margin-bottom: 0.5em;
 }
-#site-title:hover h1{
+/* #site-title:hover h1{
     background: linear-gradient(90deg, rgba(255,0,194,1) 10%, rgba(255,0,29,1) 20%, rgba(254,0,255,1) 30%, rgba(255,0,158,1) 40%, rgba(255,54,94,1) 50%, rgba(255,113,23,1) 60%, rgba(255,74,0,1) 70%, rgba(255,59,87,1) 80%, rgba(255,0,194,1) 90%);
-    /* background: url("object-11.png"); */
+    background: url("object-11.png");
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 #site-title h1:nth-child(2){
     text-align: right;

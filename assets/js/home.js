@@ -24,3 +24,21 @@ $('.obj-wrap').hover(function(){
     var target = $(this).data('target');
     $(target).css('display', 'none')
 })
+
+var titleColors = ['#ea3abd','#ea3464','#ec5553','#ec5553', '#ec5c2a', '#ea3abd', '#ea3abd', '#ea3464', '#ec5553', '#ec5c2a', '#eb4574', '#ea3abd','#ea3464','#eb4a63','#ec5553', '#ec5c2a']
+var spans = $('#site-title span')
+// console.log(spans[2].attr())
+for(var i=0;i<spans.length; i++){
+    $(spans[i]).attr('data-color', titleColors[i]) 
+}
+
+$('#site-title span').hover(function(){
+    var color = $(this).data('color')
+    $(this).css('transition', 'none')
+    $(this).css('color', color)
+}, function(){
+    var span = $(this);
+    span.css('transition', 'all 1.6s cubic-bezier(0.5, 1, 0.89, 1)')
+    setTimeout(function(){span.css('color', 'unset')},2400)
+})
+// $(spans[2]).css('color', 'red')

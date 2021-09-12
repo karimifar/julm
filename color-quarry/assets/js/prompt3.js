@@ -14,8 +14,14 @@ var currendBlend = 'normal';
 
 for (var i=0; i<blendModes.length; i++){
     var blend = blendModes[i].blend;
-    var option = $('<option value='+blend+'>'+blendModes[i].name+'</option>')
+    var blendName = blendModes[i].name;
+    var option = $('<input type="radio" class="btn-check" name="blendradio" id="blend'+i+'" value='+blend+'>')
+    if(blend=='normal'){
+        option.attr('checked', 'checked');
+    }
+    var label = $('<label class="julm-btn" for="blend'+i+'">'+blendName+'</label>')
     $('#blend-mode').append(option)
+    $('#blend-mode').append(label)
 }
 
 for (var i =1; i<=objectN; i++){
@@ -54,15 +60,18 @@ $('.object-nav-item').on('click', function(){
 })
 
 function changeBlend(){
-    var blend = $('#blend-mode').val();
+    var blend = $('#blend-mode input:radio:checked').val();
     currendBlend = blend;
     $('.appended-rock img').css('mix-blend-mode', currendBlend)
 }
+$('#blend-mode input').on('click', function(){
+    changeBlend();
+})
 
 $('#bg-btn').on('click', function(){
     if($(this).hasClass('soft')){
         $(this).removeClass('soft')
-        $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33%, rgba(0,255,0,1) 33%, rgba(0,255,0,1) 66%, rgba(0,0,255,1) 66%, rgba(0,0,255,1) 100%)')
+        $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33.3333%, rgba(0,255,0,1) 33.3333%, rgba(0,255,0,1) 66.6666%, rgba(0,0,255,1) 66.6666%, rgba(0,0,255,1) 100%)')
         $(this).text('Soft Background')
     }else{
         $(this).addClass('soft')
@@ -78,7 +87,7 @@ $('#grounds input').on('click', function(){
     console.log(ground)
     switch(ground){
         case 'hard':
-            $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33%, rgba(0,255,0,1) 33%, rgba(0,255,0,1) 66%, rgba(0,0,255,1) 66%, rgba(0,0,255,1) 100%)');
+            $('#background').css('background','linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 33.3333%, rgba(0,255,0,1) 33.3333%, rgba(0,255,0,1) 66.6666%, rgba(0,0,255,1) 66.6666%, rgba(0,0,255,1) 100%)');
             $('header').addClass('dark')
             $('#toolbar').addClass('dark')
             break;

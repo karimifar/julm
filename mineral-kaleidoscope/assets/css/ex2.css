@@ -55,16 +55,8 @@
     margin-bottom: 6px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #eeeeee55;
-    border-bottom: 4px solid #ffffff00;
 }
-.spinner-nav-item:nth-child(even){
-    background-color: #eeeeee55;
-}
-.spinner-nav-item:hover{
-    background-color: #eee;
-}
-.spinner-nav-item.display{
-    background-color: #eee;
+
+/* .spinner-nav-item.display{
     border-color: #222;
-}
+} */

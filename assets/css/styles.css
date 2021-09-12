@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
     font-family: halyard-micro, sans-serif;
+    cursor: url('../img/cursor-b.png'), auto !important;	
+}
+body.dark *{
+    cursor: url('../img/cursor-w.png'), auto !important;
 }
 img {  
     user-drag: none;  
@@ -307,11 +311,14 @@ input[type="range"]::-moz-range-thumb {
     stroke-width:2;
     stroke-miterlimit:10;
 }
+.dark .obj-line{
+    stroke: #fff;
+}
 .prompt-footer{
     position: absolute;
     display: flex;
     justify-content: center;
-    bottom: 20px;
+    bottom: 10px;
     width: 100%;
     text-align: center;
     padding: 10px 5%;
@@ -320,4 +327,7 @@ input[type="range"]::-moz-range-thumb {
     text-align: center;
     font-weight: 200;
     font-style: italic;
+}
+.dark #poem{
+    color: #fff;
 }

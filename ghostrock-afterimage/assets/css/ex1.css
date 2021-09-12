@@ -6,6 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 950px;
+    max-height: 950px;
 }
 
 #circle{
@@ -37,14 +39,14 @@
     cursor: pointer;
     /* border-radius: 5px; */
     /* background-color: #eeeeee55; */
-    border-bottom: 4px solid #ffffff00;
+    /* border-bottom: 4px solid #ffffff00; */
 }
 
 .rock-nav-item:hover{
-    background-color: #2b2b2b1d;
+    /* background-color: #2b2b2b1d; */
 }
 .rock-nav-item.display{
-    background-color: #2b2b2b1d;
+    /* background-color: #2b2b2b1d; */
 }
 #delay-control{
     margin-bottom: 20px;
