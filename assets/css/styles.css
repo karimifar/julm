@@ -183,7 +183,7 @@ img{
     left:0;
     top:0;
     /* background-color: #ffffff33; */
-    z-index: 2;
+    z-index: 6;
     display: flex;
 }
 #toolbar.closed, #tools-handle{
